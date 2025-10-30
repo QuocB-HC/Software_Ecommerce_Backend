@@ -15,8 +15,7 @@ module.exports = defineConfig({
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
     databaseDriverOptions: {
-      ssl: false,
-      sslmode: "disable",
+      ssl: { rejectUnauthorized: false },
     },
   },
 });
